@@ -1,0 +1,46 @@
+print("WELCOME TO SBI")
+pin=int(input("enter pin num"))
+money=500000
+if pin==1234:
+    print('''1.withdrawel
+             2.balance enquiry
+             3.deposit
+             4.fast cash''')
+    choose=int(input("enter your option"))
+    if choose==1:
+        w=int(input("enter amount"))
+        if w<=money and w%100==0:
+            balance=money-w
+            print("collect your cash",balance) 
+        else:
+           print("invalid cash")
+    elif choose==2:
+        print("available amount",money) 
+    elif choose==3:
+        d=int(input("enter amount"))
+        d=d+money
+        print(d)
+    elif choose==4:
+        print(''' 1.10000)
+                  2.15000
+                  3.20000
+                  4.30000''')
+        f=int(input("select option"))
+        if f==1 and 1000<=money:
+            print("collect your cash of 10000")
+        elif f==2 and 15000<=money:
+            print("collect your cash of 15000")
+        elif f==3 and 20000<=money:
+            print("collect your cash of 20000")
+        elif f==4 and 30000<=money:
+            print("collect your cash of 30000")
+    else:
+        print("invalid choose")
+else:
+    print("invalid pin")
+
+
+
+
+
+
